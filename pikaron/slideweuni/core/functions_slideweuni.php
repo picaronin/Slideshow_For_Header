@@ -65,9 +65,10 @@ class functions_slideweuni
 	*/
 	function image_store($id, $image, $url)
 	{
-		$sql = 'UPDATE ' . $this->slideweuni_table . "
-				 SET image = '$image', url = '$url'
-				 WHERE id = '$id'";
+		$sql = "UPDATE " . $this->slideweuni_table . "
+				SET image = '" . $this->db->sql_escape($image) . "',
+					url = '" . $this->db->sql_escape($url) . "'
+				WHERE id = " . (int) $id;
 		$this->db->sql_query($sql);
 
 		if (!$this->db->sql_affectedrows())
