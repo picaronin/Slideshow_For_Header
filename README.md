@@ -8,6 +8,10 @@
 - Slider effect and fade effect are included.
 - All options are configurable from the ACP.
 
+## Warning
+In case there exist an older version of this extension installed on the `/ext/Picaron/SlideWeUni` route, it is necessary to eliminate it completely by clearing/deleting all the saved data prior to the installation of this version.
+
+
 ## Install
 1. Download the latest release.
 2. In the `ext` directory of your phpBB board, copy the `pikaron/slideweuni` folder. It must be so: `/ext/pikaron/slideweuni`
@@ -18,9 +22,6 @@
 1. Navigate in the ACP to `Customise -> Extension Management -> Extensions`.
 2. Look for `Slideshow for Header` under the Enabled Extensions list, and click its `Disable` link.
 3. To permanently uninstall, click `Delete Data` and then delete the `/ext/pikaron/slideweuni` folder.
-
-## Warning
-In case there exist an older version of this extension installed on the `/ext/Picaron/SlideWeUni` route, it is necessary to eliminate it completely by clearing/deleting all the saved data prior to the installation of this version.
 
 ## License
 [GNU General Public License v2](http://opensource.org/licenses/GPL-2.0)
