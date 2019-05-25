@@ -112,7 +112,7 @@ class acp_slideweuni_module
 				$images['image' . $i] = $value_image['image'];
 				$images['url' . $i] = $value_image['url'];
 
-				unset ($value_image);
+				unset($value_image);
 			}
 		}
 
