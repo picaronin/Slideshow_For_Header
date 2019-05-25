@@ -1,0 +1,64 @@
+/*	SlideShow common Styling
+---------------------------------------------- */
+
+#search-box {
+	display: none;
+}
+
+.headerbar {
+	display: none;
+}
+
+.slideweuni-title {
+	display: none;
+	text-align: center;
+ }
+
+ .carousel-control {
+	z-index: 1;
+}
+
+.inventea-sitename a {
+	color: #fff;
+}
+
+.slideweuni-dashboard {
+	margin: auto;
+}
+
+.inventea-sitename {
+	position: absolute;
+	top: 76px;
+	padding: 0 0 0 150px;
+	color: #fff;
+}
+
+.inventea-sitename a:hover {
+	text-decoration: none;
+}
+
+.text-border {
+	font-size:30px;
+	font-weight:bold;
+	-webkit-text-stroke-width: 0.85px;
+}
+
+.text-border-small {
+	font-size:15px;
+	font-weight:bold;
+	-webkit-text-stroke-width: 0.35px;
+}
+
+a.left,
+a.left:active,
+a.left:visited,
+a.right,
+a.right:active,
+a.right:visited {
+	padding: 0;
+	background: none;
+}
+
+.slideweuni-headerbar {
+	position: relative;
+}

@@ -1,0 +1,19 @@
+imports:
+    - { resource: tables.yml }
+services:
+    pikaron.slideweuni.listener:
+        class: pikaron\slideweuni\event\listener
+        arguments:
+            - '@pikaron.slideweuni.core.functions.slideweuni'
+            - '@config'
+            - '@template'
+            - '%core.root_path%'
+        tags:
+            - { name: event.listener }
+
+    pikaron.slideweuni.core.functions.slideweuni:
+        class: pikaron\slideweuni\core\functions_slideweuni
+        arguments:
+            - '@dbal.conn'
+            - '@language'
+            - '%pikaron.slideweuni.table.slideweuni%'

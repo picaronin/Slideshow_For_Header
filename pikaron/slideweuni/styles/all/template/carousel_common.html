@@ -1,0 +1,69 @@
+			{# Carousel #}
+			<div id="main-sliderwe" class="carousel slide{{ S_SLIDE_WEUNI_EFFECT }}" data-ride="carousel" data-interval="{{ S_SLIDE_WEUNI_DELAY }}" data-pause="hover">
+
+				<ol class="carousel-indicators{% if not S_SLIDE_WEUNI_CONTROLS %} hidden{% endif %}">
+					{% for slidec in slideco %}
+						<li data-target="#main-sliderwe" data-slide-to="{{ slidec.S_SLIDE_WEUNI_C }}"{% if slidec.S_SLIDE_WEUNI_C == 0 %} class="active"{% endif %}></li>
+					{% endfor %}
+				</ol>
+
+				<div class="carousel-inner">
+					{% for slidei in slideim %}
+						<div class="item{% if slidei.S_SLIDE_WEUNI_I == 0 %} active{% endif %}">
+							{% if slidei.S_SLIDE_WEUNI_URL_ON %}<a href="{{ slidei.S_SLIDE_WEUNI_URL_IMG }}" target="{{ slidei.S_SLIDE_WEUNI_URL_DEST }}">{% endif %}
+								<img {% if slidei.S_IMAGE_IN_URL %}src="{{ slidei.S_SLIDE_WEUNI_IMG_IMG }}"{% else %}src="{{ ROOT_PATH }}ext/pikaron/slideweuni/images/{{ slidei.S_SLIDE_WEUNI_IMG_IMG }}"{% endif %} class="slideweuni-dashboard" />
+							{% if slidei.S_SLIDE_WEUNI_URL_ON %}</a>{% endif %}
+						</div>
+						{# /.items #}
+					{% endfor %}
+				</div>
+				{# /.carousel-inner #}
+
+				{# /.Carousel controls #}
+				{% if S_SLIDE_WEUNI_INTER %}
+					<a class="left carousel-control" href="#main-sliderwe" data-slide="prev">
+						{% if S_SLIDE_WEUNI_CONTROLS %}
+							<span class="glyphicon glyphicon-chevron-left icon fa-arrow-left"></span>
+						{% endif %}
+					</a>
+					<a class="right carousel-control" href="#main-sliderwe" data-slide="next">
+						{% if S_SLIDE_WEUNI_CONTROLS %}
+							<span class="glyphicon glyphicon-chevron-right icon fa-arrow-right"></span>
+						{% endif %}
+					</a>
+				{% endif %}
+
+			</div>
+			{# /#Carousel main-sliderwe #}
+
+			{% if S_SLIDE_WEUNI_SEARCH %}
+				{% if S_DISPLAY_SEARCH %}
+					<div id="search-box-we" class="search-box search-header" role="search">
+						<form action="{{ U_SEARCH }}" method="get" id="search">
+
+							<fieldset>
+
+								<input name="keywords" id="keywords" type="search" maxlength="128" title="{{ lang('SEARCH_KEYWORDS') }}" class="inputbox search tiny" size="20" value="{{ SEARCH_WORDS }}" placeholder="{{ lang('SEARCH_MINI') }}" />
+								<button class="button button-search" type="submit" title="{{ lang('SEARCH') }}">
+									<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">{{ lang('SEARCH') }}</span>
+								</button>
+								<a href="{{ U_SEARCH }}" class="button button-search-end" title="{{ lang('SEARCH_ADV') }}">
+									<i class="icon fa-cog fa-fw" aria-hidden="true"></i><span class="sr-only">{{ lang('SEARCH_ADV') }}</span>
+								</a>
+								{{ S_SEARCH_HIDDEN_FIELDS }}
+
+							</fieldset>
+
+						</form>
+					</div>
+				{% endif %}
+			{% endif %}
+
+			{% if S_SLIDE_WEUNI_TITLE %}
+				<div class="slideweuni-dashboard">
+					<div class="inventea-sitename">
+						<a href="{% if U_SITE_HOME %}{{ U_SITE_HOME }}{% else %}{{ U_INDEX }}{% endif %}" title="{% if U_SITE_HOME %}{{ lang('SITE_HOME') }}{% else %}{{ lang('INDEX') }}{% endif %}"><span class="text-border" style="-webkit-text-fill-color: {{ S_SLIDE_WEUNI_COLOR_TIT_F }}; -webkit-text-stroke-color: {{ S_SLIDE_WEUNI_COLOR_TIT_B }};">{{ SITENAME }}</span></a><br />
+						<a href="{% if U_SITE_HOME %}{{ U_SITE_HOME }}{% else %}{{ U_INDEX }}{% endif %}" title="{% if U_SITE_HOME %}{{ lang('SITE_HOME') }}{% else %}{{ lang('INDEX') }}{% endif %}"><span class="text-border-small" style="-webkit-text-fill-color: {{ S_SLIDE_WEUNI_COLOR_TIT_F }}; -webkit-text-stroke-color: {{ S_SLIDE_WEUNI_COLOR_TIT_B }};">{{ SITE_DESCRIPTION }}</span></a>
+					</div>
+				</div>
+			{% endif %}

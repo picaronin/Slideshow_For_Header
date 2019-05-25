@@ -1,0 +1,8 @@
+{% if S_SLIDE_WEUNI_ACTIVE %}
+	{% if not INCLUDED_SLIDEWEUNI_CSS %}
+		{% INCLUDECSS '@pikaron_slideweuni/css/carousel.css' %}
+		{% INCLUDECSS '@pikaron_slideweuni/css/common.css' %}
+		{% INCLUDECSS '@pikaron_slideweuni/css/slideweuni.css' %}
+		{% set INCLUDED_SLIDEWEUNI_CSS = true %}
+	{% endif %}
+{% endif %}

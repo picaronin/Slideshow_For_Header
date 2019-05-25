@@ -1,0 +1,6 @@
+{% if S_SLIDE_WEUNI_ACTIVE %}
+	{% if not INCLUDED_SLIDE_BOOTSTRAP_JS %}
+		{% INCLUDEJS '@pikaron_slideweuni/js/bootstrap.min.js' %}
+		{% set INCLUDED_SLIDE_BOOTSTRAP_JS = true %}
+	{% endif %}
+{% endif %}

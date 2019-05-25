@@ -1,0 +1,12 @@
+{% if S_SLIDE_WEUNI_ACTIVE and S_SLIDE_WEUNI_TITLE %}
+    {% if SITENAME %}
+        <div class="slideweuni-title action-bar bar-top">
+            <h1>
+                <a href="{% if U_SITE_HOME %}{{ U_SITE_HOME }}{% else %}{{ U_INDEX }}{% endif %}" title="{% if U_SITE_HOME %}{{ lang('SITE_HOME') }}{% else %}{{ lang('INDEX') }}{% endif %}">{{ SITENAME }}</a>
+            </h1>
+            <h5>
+                {{ SITE_DESCRIPTION }}
+            </h5>
+        </div>
+	{% endif %}
+{% endif %}

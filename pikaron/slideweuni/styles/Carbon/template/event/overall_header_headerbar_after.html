@@ -1,0 +1,59 @@
+{% if S_SLIDE_WEUNI_ACTIVE %}
+
+	<div class="carbon-topper"></div>
+	<div class="slideweuni-preheaderbar">
+		<div class="slideweuni-headerbar" role="banner">
+			<div class="inner">
+				{% include '@pikaron_slideweuni/carousel_common.html' %}
+			</div>
+		</div>
+	</div>
+
+	<div id="carbon-bottom2">
+
+		{% if S_DISPLAY_SEARCH and not S_IN_SEARCH %}
+			{% if not S_SLIDE_WEUNI_SEARCH %}
+				<div id="search-box2" class="search-box search-header" role="search">
+					<form action="{{ U_SEARCH }}" method="get" id="search">
+
+						<fieldset>
+
+							<input name="keywords" id="keywords" type="search" maxlength="128" title="{{ lang('SEARCH_KEYWORDS') }}" class="inputbox search tiny" size="20" value="{{ SEARCH_WORDS }}" placeholder="{{ lang('SEARCH_MINI') }}" />
+							<button class="button button-search" type="submit" title="{{ lang('SEARCH') }}">
+								<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">{{ lang('SEARCH') }}</span>
+							</button>
+							<a href="{{ U_SEARCH }}" class="button button-search-end" title="{{ lang('SEARCH_ADV') }}">
+								<i class="icon fa-cog fa-fw" aria-hidden="true"></i><span class="sr-only">{{ lang('SEARCH_ADV') }}</span>
+							</a>
+							{{ S_SEARCH_HIDDEN_FIELDS }}
+
+						</fieldset>
+
+					</form>
+				</div>
+			{% endif %}
+		{% endif %}
+
+		<ul id="nav-breadcrumbs" class="nav-breadcrumbs linklist navlinks" role="menubar">
+			{% DEFINE MICRODATA = ' itemtype="http://data-vocabulary.org/Breadcrumb" itemscope=""' %}
+			<li class="breadcrumbs">
+				{% if U_SITE_HOME %}
+					<span class="crumb" {{ definition.MICRODATA }}><a href="{{ U_SITE_HOME }}" data-navbar-reference="home"><i class="icon fa-home fa-fw" aria-hidden="true"></i><span>{{ lang('SITE_HOME') }}</span></a></span>
+				{% endif %}
+					<span class="crumb" {{ definition.MICRODATA }}><a href="{{ U_INDEX }}" accesskey="h" data-navbar-reference="index">{% if not U_SITE_HOME %}<i class="icon fa-home fa-fw"></i>{% endif %}<span>{{ lang('INDEX') }}</span></a></span>
+				{% for navlinkss in navlinks %}
+					<span class="crumb" {{ definition.MICRODATA }}{% if navlinkss.MICRODATA %} {{ navlinkss.MICRODATA }}{% endif %}><a href="{{ navlinkss.U_VIEW_FORUM }}" itemprop="url"><span itemprop="title">{{ navlinkss.FORUM_NAME }}</span></a></span>
+				{% endfor %}
+			</li>
+		</ul>
+
+	</div>
+
+	<div id="page-header2">
+		<div class="headerbar" role="banner">
+			<p class="skiplink"><a href="#start_here">{{ lang('SKIP') }}</a></p>
+			<div class="inner"></div>
+		</div>
+	</div>
+
+{% endif %}

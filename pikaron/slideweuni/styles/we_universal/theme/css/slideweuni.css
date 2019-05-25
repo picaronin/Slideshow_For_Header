@@ -1,0 +1,164 @@
+/*	SlideShow for we_universal>=2.5.6 Styling
+---------------------------------------------- */
+
+.headerbar {
+	display: block;
+}
+
+.carousel-indicators {
+	bottom: 35px;
+	left: 50%;
+}
+
+.inventea-dashboard {
+	display: none;
+}
+
+a.left:before,
+a.right:after {
+	display: none;
+}
+
+.inventea-posts-menu {
+	position: absolute;
+	right: 0;
+}
+
+.inventea-forum-menu {
+	position: absolute;
+	bottom: 0;
+}
+
+#search-box {
+	display: none;
+}
+
+#main-sliderwe {
+	position: inherit;
+	width: 94.8%;
+	margin: auto;
+}
+
+#search-box-we {
+	position: absolute;
+	top: 15px;
+	right: 50px;
+	z-index: 2;
+}
+
+#search > fieldset {
+	background-color: white;
+}
+
+.section-search #keywords {
+	margin-bottom: unset !important;
+}
+
+#notification_list,
+div.mchat-nav-container	 > div.dropdown,
+div.header-profile	> div.dropdown {
+	z-index: 11;
+}
+
+.dropdown-container > .dropdown {
+	z-index: 3;
+}
+
+.inventea-header {
+	background: #525252;
+	margin: unset;
+	overflow: unset;
+}
+
+.inventea-posts-menu, .inventea-forum-menu {
+	z-index: 10;
+}
+
+.slideweuni-title {
+	line-height: 15px;
+	display: none;
+	text-align: center;
+}
+
+.slideweuni-title > h1 {
+	font-size: 1.5em;
+}
+
+.slideweuni-dashboard {
+	max-width: 1170px;
+}
+
+@media only screen and (max-width: 2570px), only screen and (max-device-width: 2570px) {
+	.inventea-sitename {
+		top: 120px;
+		padding: 0 0 0 260px;
+	}
+}
+
+@media only screen and (max-width: 1650px), only screen and (max-device-width: 1650px) {
+	.inventea-sitename {
+		top: 70px;
+		padding: 0 0 0 130px;
+	}
+}
+
+@media only screen and (max-width: 1050px), only screen and (max-device-width: 1050px) {
+	.inventea-sitename {
+		top: 45px;
+		padding: 0 0 0 100px;
+	}
+	#search-box-we {
+	right: 35px;
+	top: 10px;
+	}
+	.text-border {
+		font-size: 28px;
+	}
+	.carousel-indicators {
+		bottom: 25px;
+	}
+	.carousel-control .glyphicon-chevron-left,
+	.carousel-control .glyphicon-chevron-right {
+		font-size: 25px;
+	}
+}
+
+@media only screen and (max-width: 800px), only screen and (max-device-width: 800px) {
+	.slideweuni-title {
+		display: block;
+	}
+	.inventea-sitename {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 700px), only screen and (max-device-width: 700px) {
+	.inventea-posts-menu, .inventea-forum-menu {
+		display: none;
+	}
+	#main-sliderwe {
+		width: 100%;
+	}
+	.slideweuni-title {
+		display: block;
+	}
+	.inventea-sitename {
+		display: none;
+	}
+	.carousel-indicators {
+		display: none;
+	}
+	.glyphicon	{
+		top: 40% !important;
+	}
+	.carousel-control .glyphicon-chevron-left,
+	.carousel-control .glyphicon-chevron-right {
+		font-size: 13px;
+	}
+	.inventea-mobile-dropdown-menu {
+		position: absolute;
+		right: 10px;
+		display: block;
+		margin-top: -6px;
+	}
+}

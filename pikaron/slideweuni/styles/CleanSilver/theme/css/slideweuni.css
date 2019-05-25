@@ -1,0 +1,77 @@
+/*	SlideShow for CleanSilver Styling
+---------------------------------------------- */
+
+.slideweuni-title > h1 {
+	margin-right: 0;
+}
+
+.slideweuni-description {
+	float: left;
+	margin: 0;
+}
+
+.slideweuni-headerbar {
+	margin: 0 auto 4px;
+	max-width: 1230px;
+}
+
+.backheaderbar {
+	background-color: #F5F7FA;
+}
+
+#main-slider {
+	position: inherit;
+}
+
+#search-box-we {
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin-right: 45px;
+	margin-top: 30px;
+	z-index: 2;
+}
+
+.inventea-sitename {
+	padding: 0 0 0 160px;
+}
+
+@media only screen and (max-width: 1050px), only screen and (max-device-width: 1050px) {
+	.inventea-sitename {
+		top: 35px;
+		padding: 0 0 0 130px;
+	}
+	#search-box-we {
+	margin-right: 10px;
+	margin-top: 10px;
+	}
+	.text-border {
+		font-size: 28px;
+	}
+	.carousel-indicators {
+		bottom: 15px;
+	}
+	.carousel-control .glyphicon-chevron-left,
+	.carousel-control .glyphicon-chevron-right {
+		font-size: 25px;
+	}
+}
+
+@media only screen and (max-width: 700px), only screen and (max-device-width: 700px) {
+	.slideweuni-title {
+		display: block;
+	}
+	.inventea-sitename {
+		display: none;
+	}
+	.carousel-indicators {
+		display: none;
+	}
+	.glyphicon	{
+		top: 40% !important;
+	}
+	.carousel-control .glyphicon-chevron-left,
+	.carousel-control .glyphicon-chevron-right {
+		font-size: 13px;
+	}
+}

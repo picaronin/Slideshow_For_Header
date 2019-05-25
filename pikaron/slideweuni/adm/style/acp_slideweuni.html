@@ -1,0 +1,188 @@
+{% INCLUDE 'overall_header.html' %}
+{% INCLUDECSS '@pikaron_slideweuni/css/acp_slideweuni.css' %}
+{% INCLUDECSS '@pikaron_slideweuni/css/admin_forms.css' %}
+
+<a name="maincontent"></a>
+
+<div class="head-panel">
+	<div class="head-title"><i class="icon fa-image fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;{{ lang('ACP_SLIDE_WEUNI') }}</div>
+	<div class="head-description">{{ lang('ACP_SLIDE_WEUNI_EXPLAIN') }}</div>
+	<p><img src="https://img.shields.io/badge/{{ lang('ACP_SLIDE_WEUNI_VERSION') }}-{{ SLIDE_WEUNI_MOD_VERSION }}-green.svg?style=plastic"></p>
+</div>
+
+{% if S_ERROR %}
+	<div class="head-panel-error">
+		<div class="head-title">{{ lang('WARNING') }}</div>
+		<div class="head-description">{{ ERROR_MSG }}</div>
+	</div>
+{% endif %}
+
+<form id="acp_slide" method="post" action="{{ U_ACTION }}">
+
+	<fieldset>
+		<legend><i class="icon fa-cog fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;{{ lang('GENERAL_OPTIONS') }}</legend>
+
+		<dl>
+			<dt><label for="config[slideweuni_active]">{{ lang('L_SLIDE_WEUNI_ACTIVE') }}{{ lang('COLON') }}</label></dt>
+			<dd>
+				<input type="radio" id="slideweuni_active1" name="config[slideweuni_active]" value="1"{% if S_SLIDEWEUNI_ACTIVE %} checked="checked"{% endif %} />
+				<label class="set" for="slideweuni_active1">{{ lang('YES') }}</label>
+				<input type="radio" id="slideweuni_active0" name="config[slideweuni_active]" value="0"{% if not S_SLIDEWEUNI_ACTIVE %} checked="checked"{% endif %} />
+				<label class="unset" for="slideweuni_active0">{{ lang('NO') }}</label>
+			</dd>
+		</dl>
+
+		<dl>
+			<dt><label for="slideweuni_delay">{{ lang('L_SLIDE_WEUNI_DELAY') }}{{ lang('COLON') }}</label><br><span>{{ lang('L_SLIDE_WEUNI_DELAY_EXPLAIN') }}</span></dt>
+			<dd>
+				<input class="textbox" id="slideweuni_delay" type="number" min="1000" max="20000" name="config[slideweuni_delay]" value="{{ S_SLIDEWEUNI_DELAY }}"> {{ lang('L_UNI_DELAY') }}
+			</dd>
+		</dl>
+
+		<dl>
+			<dt><label for="slideweuni_effect">{{ lang('L_SLIDE_WEUNI_EFFECT') }}{{ lang('COLON') }}</label></dt>
+			<dd>
+				<select id="slideweuni_effect" name="config[slideweuni_effect]">
+					<option value="1"{% if S_SLIDEWEUNI_EFFECT == 1 %} selected="selected"{% endif %}>{{ lang('L_SLIDE') }}</option>
+					<option value="2"{% if S_SLIDEWEUNI_EFFECT == 2 %} selected="selected"{% endif %}>{{ lang('L_FADE') }}</option>
+				</select>
+			</dd>
+		</dl>
+
+		<dl>
+			<dt><label for="config[slideweuni_title]">{{ lang('L_SLIDE_WEUNI_TITLE') }}{{ lang('COLON') }}</label></dt>
+			<dd>
+				<input type="radio" id="slideweuni_title1" name="config[slideweuni_title]" value="1"{% if S_SLIDEWEUNI_TITLE %} checked="checked"{% endif %} />
+				<label class="set" for="slideweuni_title1">{{ lang('YES') }}</label>
+				<input type="radio" id="slideweuni_title0" name="config[slideweuni_title]" value="0"{% if not S_SLIDEWEUNI_TITLE %} checked="checked"{% endif %} />
+				<label class="unset" for="slideweuni_title0">{{ lang('NO') }}</label>
+			</dd>
+		</dl>
+
+		<dl>
+			<dt><label for="slideweuni_color_tit_f">{{ lang('L_SLIDE_WEUNI_COLOR_TIT_F') }}{{ lang('COLON') }}</label><br><span>{{ lang('L_SLIDE_WEUNI_COLOR_TIT_F_EXPLAIN') }}</span></dt>
+			<dd>
+				<input class="textbox2 jscolor {hash:true}" id="slideweuni_color_tit_f" type="text" size="8" maxlength="8" name="config[slideweuni_color_tit_f]" value="{{ S_SLIDEWEUNI_COLOR_TIT_F }}">&nbsp;{{ lang('L_SLIDE_WEUNI_COLOR_SELECT') }}
+			</dd>
+		</dl>
+
+		<dl>
+			<dt><label for="slideweuni_color_tit_b">{{ lang('L_SLIDE_WEUNI_COLOR_TIT_B') }}{{ lang('COLON') }}</label><br><span>{{ lang('L_SLIDE_WEUNI_COLOR_TIT_B_EXPLAIN') }}</span></dt>
+			<dd>
+				<input class="textbox2 jscolor {hash:true}" id="slideweuni_color_tit_b" type="text" size="8" maxlength="8" name="config[slideweuni_color_tit_b]" value="{{ S_SLIDEWEUNI_COLOR_TIT_B }}">&nbsp;{{ lang('L_SLIDE_WEUNI_COLOR_SELECT') }}
+			</dd>
+		</dl>
+
+		<dl>
+			<dt><label for="config[slideweuni_search]">{{ lang('L_SLIDE_WEUNI_SEARCH') }}{{ lang('COLON') }}</label></dt>
+			<dd>
+				<input type="radio" id="slideweuni_search1" name="config[slideweuni_search]" value="1"{% if S_SLIDEWEUNI_SEARCH %} checked="checked"{% endif %} />
+				<label class="set" for="slideweuni_search1">{{ lang('YES') }}</label>
+				<input type="radio" id="slideweuni_search0" name="config[slideweuni_search]" value="0"{% if not S_SLIDEWEUNI_SEARCH %} checked="checked"{% endif %} />
+				<label class="unset" for="slideweuni_search0">{{ lang('NO') }}</label>
+			</dd>
+		</dl>
+
+		<dl>
+			<dt><label for="config[slideweuni_inter]">{{ lang('L_SLIDE_WEUNI_INTER') }}{{ lang('COLON') }}</label></dt>
+			<dd>
+				<input type="radio" id="slideweuni_inter1" name="config[slideweuni_inter]" value="1"{% if S_SLIDEWEUNI_INTER %} checked="checked"{% endif %} />
+				<label class="set" for="slideweuni_inter1">{{ lang('YES') }}</label>
+				<input type="radio" id="slideweuni_inter0" name="config[slideweuni_inter]" value="0"{% if not S_SLIDEWEUNI_INTER %} checked="checked"{% endif %} />
+				<label class="unset" for="slideweuni_inter0">{{ lang('NO') }}</label>
+			</dd>
+		</dl>
+
+		<dl>
+			<dt><label for="config[slideweuni_controls]">{{ lang('L_SLIDE_WEUNI_CONTROLS') }}{{ lang('COLON') }}</label></dt>
+			<dd>
+				<input type="radio" id="slideweuni_controls1" name="config[slideweuni_controls]" value="1"{% if S_SLIDEWEUNI_CONTROLS %} checked="checked"{% endif %} />
+				<label class="set" for="slideweuni_controls1">{{ lang('YES') }}</label>
+				<input type="radio" id="slideweuni_controls0" name="config[slideweuni_controls]" value="0"{% if not S_SLIDEWEUNI_CONTROLS %} checked="checked"{% endif %} />
+				<label class="unset" for="slideweuni_controls0">{{ lang('NO') }}</label>
+			</dd>
+		</dl>
+
+		<dl>
+			<dt><label for="config[slideweuni_aleatory]">{{ lang('L_SLIDE_WEUNI_ALEATORY') }}{{ lang('COLON') }}</label></dt>
+			<dd>
+				<input type="radio" id="slideweuni_aleatory1" name="config[slideweuni_aleatory]" value="1"{% if S_SLIDEWEUNI_ALEATORY %} checked="checked"{% endif %} />
+				<label class="set" for="slideweuni_aleatory1">{{ lang('YES') }}</label>
+				<input type="radio" id="slideweuni_aleatory0" name="config[slideweuni_aleatory]" value="0"{% if not S_SLIDEWEUNI_ALEATORY %} checked="checked"{% endif %} />
+				<label class="unset" for="slideweuni_aleatory0">{{ lang('NO') }}</label>
+			</dd>
+		</dl>
+
+		<dl>
+			<dt><label for="slideweuni_cant_img">{{ lang('L_SLIDE_WEUNI_CANT_IMG') }}{{ lang('COLON') }}</label><br><span>{{ lang('L_SLIDE_WEUNI_CANT_IMG_EXPLAIN') }}</span></dt>
+			<dd>
+				<input class="textbox" id="slideweuni_cant_img" type="number" min="2" max="60" name="config[slideweuni_cant_img]" value="{{ S_SLIDEWEUNI_CANT_IMG }}">
+			</dd>
+		</dl>
+	</fieldset>
+
+	<fieldset>
+		<legend>{{ lang('ACP_SUBMIT_CHANGES') }}</legend>
+		<p class="submit-buttons">
+			<input class="adm-button" type="submit" id="submit" name="submit" value="{{ lang('SUBMIT') }}" />&nbsp;
+			<input class="adm-button" type="reset" id="reset" name="reset" value="{{ lang('RESET') }}" />
+		</p>
+	</fieldset>
+
+	{% if images %}
+		{% for image in images %}
+
+			<fieldset>
+				<legend><i class="icon fa-camera fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;{{ lang('ACP_SLIDE_WEUNI_IMAGES') }} {{ image.KEY }}</legend>
+
+				<dl>
+					<dt><label for="images[image{{ image.KEY }}]">{{ lang('L_SLIDE_WEUNI_IMG', image.KEY) }}{{ lang('COLON') }}</label></dt>
+					<dd>
+						<input class="textbox" id="images[image{{ image.KEY }}]" type="text" size="78" maxlength="255" name="images[image{{ image.KEY }}]" value="{{ image.IMAGE }}">
+						<br>
+						{% if image.THERE_IMAGE %}
+							{% if image.HTTP_IMAGE %}
+								{% if image.THERE_HTTP_IMAGE %}
+									<img src="{{ image.IMAGE }}" class="slideweuni-img" title="{{ image.IMAGE }}" alt="{{ image.IMAGE }}">
+								{% else %}
+									<i>{{ lang('L_SLIDE_WEUNI_NO_IMG_URL') }}</i>
+								{% endif %}
+							{% else %}
+								{% if image.LOCAL_IMAGE %}
+									<img src="{{ ROOT_PATH }}ext/pikaron/slideweuni/images/{{ image.IMAGE }}" class="slideweuni-img" title ="{{ image.IMAGE }}" alt="{{ image.IMAGE }}"/>
+								{% else %}
+									<i>{{ lang('L_SLIDE_WEUNI_NO_IMG') }} {{ image.KEY }} {{ lang('L_SLIDE_WEUNI_NO_IMG_RUTE') }} {{ ROOT_PATH }}ext/pikaron/slideweuni/images/{{ image.IMAGE }}</i>
+								{% endif %}
+							{% endif %}
+						{% else %}
+							<i>{{ lang('L_SLIDE_WEUNI_NO_IMG') }} {{ image.KEY }}</i>
+						{% endif %}
+						<input type="hidden" id="images[id{{ image.KEY }}]" name="images[id{{ image.KEY }}]" value="{{ image.KEY }}">
+					</dd>
+				</dl>
+
+				<dl>
+					<dt><label for="images[url{{ image.KEY }}]">{{ lang('L_SLIDE_WEUNI_URL', image.KEY) }}{{ lang('COLON') }}</label></dt>
+					<dd>
+						<input class="textbox" id="images[url{{ image.KEY }}]" type="url" size="78" maxlength="255" name="images[url{{ image.KEY }}]" value="{{ image.URL }}">
+						<br><br>
+					</dd>
+				</dl>
+
+			</fieldset>
+
+			<fieldset>
+				<legend>{{ lang('ACP_SUBMIT_CHANGES') }}</legend>
+				<p class="submit-buttons">
+					<input class="adm-button" type="submit" id="submit" name="submit" value="{{ lang('SUBMIT') }}" />&nbsp;
+					<input class="adm-button" type="reset" id="reset" name="reset" value="{{ lang('RESET') }}" />
+				</p>
+			</fieldset>
+
+		{% endfor %}
+	{% endif %}
+	{{ S_FORM_TOKEN }}
+</form>
+
+{% INCLUDEJS '@pikaron_slideweuni/js/jscolor.js' %}
+{% INCLUDE 'overall_footer.html' %}
