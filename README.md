@@ -1,4 +1,4 @@
-# phpBB Extension - Slideshow for Header v1.0.0
+# Slideshow for Header v1.0.0
 - This Extension give a Slider Carousel effect for jQuery in the header of the prosilver >= 3.2.5, we_universal >= 2.5.6, X-Creamy >= 1.0.9, Orange_BBEs >= 2.0.6, flat-style >= 1.0.6, elegance >= 3.2.3, Carbon >= 1.1.8, CleanSilver >= 1.0.1, Maxthon >= 2.0.3, Rock'n Roll >= 2.0.4, Black-Silver >= 1.1.9 (& Slim-Split), prosilver_se >= 3.2.5, cubes >= 1.0.2 and ne-blackgreen >= 3.6 templates replacing the existing banner.
 - Supports up to 60 images to which an external link URL can optionally be associated.
 - In order not to alter the initial design of the style, the recommended size of the images must be 2570px x 465px. 
