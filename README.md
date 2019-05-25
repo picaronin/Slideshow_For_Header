@@ -8,7 +8,7 @@
 - Slider effect and fade effect are included.
 - All options are configurable from the ACP.
 
-## Warning
+### Warning
 In case there exist an older version of this extension installed on the `/ext/Picaron/SlideWeUni` route, it is necessary to eliminate it completely by clearing/deleting all the saved data prior to the installation of this version.
 
 
