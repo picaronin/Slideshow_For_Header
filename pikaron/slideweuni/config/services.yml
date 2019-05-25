@@ -1,5 +1,6 @@
 imports:
     - { resource: tables.yml }
+
 services:
     pikaron.slideweuni.listener:
         class: pikaron\slideweuni\event\listener
