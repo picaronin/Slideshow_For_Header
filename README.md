@@ -12,6 +12,9 @@
 ### Warning
 In case there exist an older version of this extension installed on the `/ext/Picaron/SlideWeUni` route, it is necessary to eliminate it completely by clearing/deleting all the saved data prior to the installation of this version.
 
+## Requirements
+* phpBB >= 3.2.0
+* PHP >= 5.3.3
 
 ## Install
 1. Download the latest release.
