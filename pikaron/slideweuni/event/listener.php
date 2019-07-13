@@ -63,26 +63,8 @@ class listener implements EventSubscriberInterface
 	static public function getSubscribedEvents()
 	{
 		return array(
-			'core.user_setup'	=> 'user_setup',
 			'core.page_header'	=> 'page_header',
 		);
-	}
-
-	/**
-	 * Load language files.
-	 *
-	 * @param object $event
-	 *
-	 * @return void
-	 */
-	public function user_setup($event)
-	{
-		$lang_set_ext = $event['lang_set_ext'];
-		$lang_set_ext[] = [
-			'ext_name'	=> 'pikaron/slideweuni',
-			'lang_set'	=> 'slideweuni'
-		];
-		$event['lang_set_ext'] = $lang_set_ext;
 	}
 
 	public function page_header()
@@ -154,7 +136,7 @@ class listener implements EventSubscriberInterface
 							}
 						}
 					}
-					unset ($value_image);
+					unset($value_image);
 				}
 			}
 

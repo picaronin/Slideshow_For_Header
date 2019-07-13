@@ -22,18 +22,46 @@ class ext extends \phpbb\extension\base
 	*/
 	public function is_enableable()
 	{
-		// Requires phpBB 3.2.4 or newer.
 		$config = $this->container->get('config');
-		$is_enableable = phpbb_version_compare($config['version'], '3.2.4', '>=');
+		$language = $this->container->get('language');
+		$language->add_lang('slideweuni', 'pikaron/slideweuni');
 
-		// Display a custom warning message if requirement fails.
-		if (!$is_enableable)
+		// Verify if there is a previous version installed
+		if (isset($config['slide_weuni_version']))
 		{
-			$language = $this->container->get('language');
-			$language->add_lang('slideweuni', 'pikaron/slideweuni');
-			trigger_error($language->lang('SLIDE_WEUNI_INSTALL_ERROR'), E_USER_WARNING);
+			trigger_error($language->lang('SLIDE_WEUNI_OLD_VERSION', $config['slide_weuni_version'], $config['slide_weuni_version'], $config['slide_weuni_version']), E_USER_WARNING);
 		}
 
-		return $is_enableable;
+		/**
+		 * Check phpBB requirements
+		 *
+		 * Requires phpBB 3.2.4 or greater
+		 *
+		 * @return bool
+		 */
+		$is_ver_phpbb = phpbb_version_compare($config['version'], '3.2.4', '>=');
+
+		// Display a custom warning message if requirement fails.
+		if (!$is_ver_phpbb)
+		{
+			trigger_error($language->lang('SLIDE_WEUNI_PHPBB_ERROR'), E_USER_WARNING);
+		}
+
+		/**
+		 * Check PHP requirements
+		 *
+		 * Requires PHP 5.6.0 or greater
+		 *
+		 * @return bool
+		 */
+		$is_ver_php = phpbb_version_compare(PHP_VERSION, '5.6.0', '>=');
+
+		// Display a custom warning message if requirement fails.
+		if (!$is_ver_php)
+		{
+			trigger_error($language->lang('SLIDE_WEUNI_PHP_ERROR'), E_USER_WARNING);
+		}
+
+		return $is_ver_phpbb && $is_ver_php;
 	}
 }

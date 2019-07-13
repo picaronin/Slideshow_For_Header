@@ -10,7 +10,7 @@
 
 namespace pikaron\slideweuni\migrations;
 
-class release_1_0_0 extends \phpbb\db\migration\migration
+class release_1_3_0 extends \phpbb\db\migration\migration
 {
 	public function effectively_installed()
 	{
@@ -25,7 +25,7 @@ class release_1_0_0 extends \phpbb\db\migration\migration
 	public function update_data()
 	{
 		return array(
-			array('config.add', array('slideweuni_version', '1.0.0')),
+			array('config.add', array('slideweuni_version', '1.3.0')),
 			array('config.add', array('slideweuni_title', 1)),
 			array('config.add', array('slideweuni_active', 1)),
 			array('config.add', array('slideweuni_cant_img', 3)),
@@ -96,7 +96,7 @@ class release_1_0_0 extends \phpbb\db\migration\migration
 				array(
 					'id'	=> '1',
 					'image' => 'https://i.imgur.com/ZVzD4JP.jpg',
-					'url'	=> 'https://www.phpbb.com',
+					'url'	=> 'https://github.com/picaronin',
 					),
 				array(
 					'id'	=> '2',
@@ -106,7 +106,7 @@ class release_1_0_0 extends \phpbb\db\migration\migration
 				array(
 					'id'	=> '3',
 					'image' => 'slide_we.jpg',
-					'url'	=> 'https://www.phpbb.com/customise/db/extension/slideweuni/',
+					'url'	=> 'https://www.phpbb-es.com/foro/viewtopic.php?f=147&t=42139',
 				),
 			);
 			// Insert sample data
