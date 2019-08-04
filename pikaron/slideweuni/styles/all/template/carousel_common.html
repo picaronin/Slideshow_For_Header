@@ -11,7 +11,7 @@
 		{% for slidei in slideim %}
 			<div class="item{% if slidei.S_SLIDE_WEUNI_I == 0 %} active{% endif %}">
 				{% if slidei.S_SLIDE_WEUNI_URL_ON %}<a href="{{ slidei.S_SLIDE_WEUNI_URL_IMG }}" target="{{ slidei.S_SLIDE_WEUNI_URL_DEST }}">{% endif %}
-					<img {% if slidei.S_IMAGE_IN_URL %}src="{{ slidei.S_SLIDE_WEUNI_IMG_IMG }}"{% else %}src="{{ ROOT_PATH }}ext/pikaron/slideweuni/images/{{ slidei.S_SLIDE_WEUNI_IMG_IMG }}"{% endif %} class="slideweuni-dashboard" />
+					<img {% if slidei.S_IMAGE_IN_URL %}src="{{ slidei.S_SLIDE_WEUNI_IMG_IMG }}"{% else %}src="{{ ROOT_PATH }}ext/pikaron/slideweuni/images/{{ slidei.S_SLIDE_WEUNI_IMG_IMG }}"{% endif %} class="slideweuni-dashboard" alt="Banner" />
 				{% if slidei.S_SLIDE_WEUNI_URL_ON %}</a>{% endif %}
 			</div>
 			{# /.items #}
@@ -62,7 +62,7 @@
 {% if S_SLIDE_WEUNI_TITLE %}
 	<div class="slideweuni-dashboard">
 		<div class="inventea-sitename">
-			<a href="{% if U_SITE_HOME %}{{ U_SITE_HOME }}{% else %}{{ U_INDEX }}{% endif %}" title="{% if U_SITE_HOME %}{{ lang('SITE_HOME') }}{% else %}{{ lang('INDEX') }}{% endif %}"><span class="text-border" style="-webkit-text-fill-color: {{ S_SLIDE_WEUNI_COLOR_TIT_F }}; -webkit-text-stroke-color: {{ S_SLIDE_WEUNI_COLOR_TIT_B }};">{{ SITENAME }}</span></a><br />
+			<a href="{% if U_SITE_HOME %}{{ U_SITE_HOME }}{% else %}{{ U_INDEX }}{% endif %}" title="{% if U_SITE_HOME %}{{ lang('SITE_HOME') }}{% else %}{{ lang('INDEX') }}{% endif %}"><span class="text-border" style="-webkit-text-fill-color: {{ S_SLIDE_WEUNI_COLOR_TIT_F }}; -webkit-text-stroke-color: {{ S_SLIDE_WEUNI_COLOR_TIT_B }};">{{ SITENAME }}</span></a><br>
 			<a href="{% if U_SITE_HOME %}{{ U_SITE_HOME }}{% else %}{{ U_INDEX }}{% endif %}" title="{% if U_SITE_HOME %}{{ lang('SITE_HOME') }}{% else %}{{ lang('INDEX') }}{% endif %}"><span class="text-border-small" style="-webkit-text-fill-color: {{ S_SLIDE_WEUNI_COLOR_TIT_F }}; -webkit-text-stroke-color: {{ S_SLIDE_WEUNI_COLOR_TIT_B }};">{{ SITE_DESCRIPTION }}</span></a>
 		</div>
 	</div>
