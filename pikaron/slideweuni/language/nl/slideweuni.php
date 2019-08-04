@@ -4,7 +4,6 @@
  * Slideshow for Header extension for the phpBB Forum Software package.
  *
  * @copyright (c) 2019 Picaron
- * Nederlandse vertaling @ Solidjeuh <https://www.froddelpower.be>
  * @license GNU General Public License, version 2 (GPL-2.0)
  *
  */
@@ -35,7 +34,7 @@ if (empty($lang) || !is_array($lang))
 // in a url you again do not need to specify an order e.g., 'Click %sHERE%s' is fine
 
 $lang = array_merge($lang, array(
-		'SLIDE_WEUNI_PHPBB_ERROR'			=> 'Slideshow for Header kan niet worden geïnstalleerd. Het vereist phpBB 3.2.4 of nieuwer.',
-		'SLIDE_WEUNI_PHP_ERROR'				=> 'Slideshow for Header kan niet worden geïnstalleerd. Het vereist php 5.6.0 of nieuwer.',
-		'SLIDE_WEUNI_OLD_VERSION'			=> 'Slideshow for Header kan niet worden geïnstalleerd.<br><br>An outdated version of the installed extension exists.<br><br>Before installing the new version, it is necessary to completely uninstall the SlideWeUni_%1$s version<br><br>You can download the obsolete version from the following link <a href="http://www.siteproall.com/SlideWeUni/SlideWeUni_%2$s.zip">Download SlideWeUni_%3$s</a>.',
+		'SLIDE_WEUNI_PHPBB_ERROR'			=> 'Slideshow voor Header kan niet worden geïnstalleerd. Het vereist phpBB 3.2.4 of nieuwer.',
+		'SLIDE_WEUNI_PHP_ERROR'				=> 'Slideshow voor Header kan niet worden geïnstalleerd. Het vereist php 5.6.0 of nieuwer.',
+		'SLIDE_WEUNI_OLD_VERSION'			=> 'Slideshow voor Header kan niet worden geïnstalleerd.<br><br>Er is een verouderde versie van de geïnstalleerde extensie aanwezig.<br><br>Voordat u de nieuwe versie installeert, moet u de SlideWeUni_%1$s versie volledig verwijderen<br><br>U kunt de verouderde versie downloaden via de volgende link <a href="http://www.siteproall.com/SlideWeUni/SlideWeUni_%2$s.zip">Download SlideWeUni_%3$s</a>.',
 ));

@@ -4,7 +4,6 @@
  * Slideshow for Header extension for the phpBB Forum Software package.
  *
  * @copyright (c) 2019 Picaron
- * Nederlandse vertaling @ Solidjeuh <https://www.froddelpower.be>
  * @license GNU General Public License, version 2 (GPL-2.0)
  *
  */
@@ -35,7 +34,7 @@ if (empty($lang) || !is_array($lang))
 // in a url you again do not need to specify an order e.g., 'Click %sHERE%s' is fine
 
 $lang = array_merge($lang, array(
-		'ACP_SLIDE_WEUNI'					=> 'Slideshow for Header',
+		'ACP_SLIDE_WEUNI'					=> 'Slideshow voor Header',
 		'ACP_SLIDE_WEUNI_SETTINGS'			=> 'Instellingen',
 		'ACP_SLIDE_WEUNI_EXPLAIN'			=> 'Voorgestelde grootte van afbeeldingen: 2570px x 465px.<br>Pad voor de upload:: ./ext/pikaron/slideweuni/images/ of URL met externe link (Afbeeldingen gehost op het internet)<br>(Optioneel - De afbeeldingen worden willekeurig weergegeven)<br>(Optioneel - URL-velden die moeten worden omgeleid naar externe links)',
 		'ACP_SLIDE_WEUNI_VERSION'			=> 'Extensie versie: ',
@@ -44,7 +43,7 @@ $lang = array_merge($lang, array(
 		'L_SLIDE_WEUNI_DELAY'				=> 'Vertraging voor overgang tussen afbeeldingen',
 		'L_SLIDE_WEUNI_DELAY_EXPLAIN'		=> '(Minimum: 1000 ms = 1 Seconde, Maximum: 20000 ms = 20 Seconden)',
 		'L_UNI_DELAY'						=> 'Milliseconden',
-		'L_SLIDE_WEUNI_INTER'				=> 'The User can interact with the transition of the images',
+		'L_SLIDE_WEUNI_INTER'				=> 'De gebruiker kan spelen met de overgang van de afbeeldingen',
 		'L_SLIDE_WEUNI_CONTROLS'			=> 'Toon bedieningselementen',
 		'L_SLIDE_WEUNI_ALEATORY'			=> 'Afbeeldingen in willekeurige volgorde.',
 		'L_SLIDE_WEUNI_TITLE'				=> 'Toon titel en beschrijving',
