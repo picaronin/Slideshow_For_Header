@@ -10,14 +10,12 @@
 	</div>
 
 	<div id="carbon-bottom2">
-
+        <!-- EVENT overall_header_searchbox_before -->
 		{% if S_DISPLAY_SEARCH and not S_IN_SEARCH %}
 			{% if not S_SLIDE_WEUNI_SEARCH %}
 				<div id="search-box2" class="search-box search-header" role="search">
 					<form action="{{ U_SEARCH }}" method="get" id="search">
-
 						<fieldset>
-
 							<input name="keywords" id="keywords" type="search" maxlength="128" title="{{ lang('SEARCH_KEYWORDS') }}" class="inputbox search tiny" size="20" value="{{ SEARCH_WORDS }}" placeholder="{{ lang('SEARCH_MINI') }}" />
 							<button class="button button-search" type="submit" title="{{ lang('SEARCH') }}">
 								<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">{{ lang('SEARCH') }}</span>
@@ -26,31 +24,41 @@
 								<i class="icon fa-cog fa-fw" aria-hidden="true"></i><span class="sr-only">{{ lang('SEARCH_ADV') }}</span>
 							</a>
 							{{ S_SEARCH_HIDDEN_FIELDS }}
-
 						</fieldset>
-
 					</form>
 				</div>
 			{% endif %}
 		{% endif %}
+		<!-- EVENT overall_header_searchbox_after -->        
 
+		<!-- EVENT overall_header_navbar_before -->
 		<ul id="nav-breadcrumbs" class="nav-breadcrumbs linklist navlinks" role="menubar">
-			{% DEFINE MICRODATA = ' itemtype="http://data-vocabulary.org/Breadcrumb" itemscope=""' %}
-			<li class="breadcrumbs">
+			{% DEFINE MICRODATA = ' itemtype="http://schema.org/ListItem" itemprop="itemListElement" itemscope=""' %}
+			{% set navlink_position = 1 %}
+			<!-- EVENT overall_header_breadcrumbs_before -->            
+			<li class="breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">
 				{% if U_SITE_HOME %}
-					<span class="crumb" {{ definition.MICRODATA }}><a href="{{ U_SITE_HOME }}" data-navbar-reference="home"><i class="icon fa-home fa-fw" aria-hidden="true"></i><span>{{ lang('SITE_HOME') }}</span></a></span>
+					<span class="crumb" {{ definition.MICRODATA }}><a href="{{ U_SITE_HOME }}" itemtype="https://schema.org/Thing" itemscope itemprop="item" data-navbar-reference="home"><i class="icon fa-home fa-fw" aria-hidden="true"></i><span itemprop="name">{{ lang('SITE_HOME') }}</span></a><meta itemprop="position" content="{{ navlink_position }}{% set navlink_position = navlink_position + 1 %}" /></span>
 				{% endif %}
-					<span class="crumb" {{ definition.MICRODATA }}><a href="{{ U_INDEX }}" accesskey="h" data-navbar-reference="index">{% if not U_SITE_HOME %}<i class="icon fa-home fa-fw"></i>{% endif %}<span>{{ lang('INDEX') }}</span></a></span>
+                <!-- EVENT overall_header_breadcrumb_prepend -->
+                <span class="crumb" {{ definition.MICRODATA }}><a href="{{ U_INDEX }}" itemtype="https://schema.org/Thing" itemscope itemprop="item" accesskey="h" data-navbar-reference="index">{% if not U_SITE_HOME %}<i class="icon fa-home fa-fw"></i>{% endif %}<span itemprop="name">{{ lang('INDEX') }}</span></a><meta itemprop="position" content="{{ navlink_position }}{% set navlink_position = navlink_position + 1 %}" /></span>
 				{% for navlinkss in navlinks %}
-					<span class="crumb" {{ definition.MICRODATA }}{% if navlinkss.MICRODATA %} {{ navlinkss.MICRODATA }}{% endif %}><a href="{{ navlinkss.U_VIEW_FORUM }}" itemprop="url"><span itemprop="title">{{ navlinkss.FORUM_NAME }}</span></a></span>
+                    <!-- EVENT overall_header_navlink_prepend -->                
+					{% set NAVLINK_NAME = navlinkss.BREADCRUMB_NAME | default(navlinkss.FORUM_NAME) %}
+					{% set NAVLINK_LINK = navlinkss.U_BREADCRUMB | default(navlinkss.U_VIEW_FORUM) %}
+					<span class="crumb" {{ definition.MICRODATA }}{% if navlinkss.MICRODATA %} {{ navlinkss.MICRODATA }}{% endif %}><a href="{{ NAVLINK_LINK }}" itemtype="https://schema.org/Thing" itemscope itemprop="item"><span itemprop="name">{{ NAVLINK_NAME }}</span></a><meta itemprop="position" content="{{ navlink_position }}{% set navlink_position = navlink_position + 1 %}" /></span>
+                    <!-- EVENT overall_header_navlink_append -->                    
 				{% endfor %}
+                <!-- EVENT overall_header_breadcrumb_append -->
 			</li>
+            <!-- EVENT overall_header_breadcrumbs_after -->
 		</ul>
 
 	</div>
 
 	<div id="page-header2">
 		<div class="headerbar" role="banner">
+            <!-- EVENT overall_header_headerbar_before -->
 			<p class="skiplink"><a href="#start_here">{{ lang('SKIP') }}</a></p>
 			<div class="inner"></div>
 		</div>

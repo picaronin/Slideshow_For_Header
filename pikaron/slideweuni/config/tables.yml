@@ -1,2 +1,2 @@
 parameters:
-    pikaron.slideweuni.table.slideweuni: %core.table_prefix%slideweuni
+    pikaron.slideweuni.table.slideweuni: '%core.table_prefix%slideweuni'

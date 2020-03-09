@@ -1,6 +1,52 @@
 /*	SlideShow for cubes Styling
 ---------------------------------------------- */
 
+/* Responsive breadcrumbswe
+----------------------------------------*/
+.breadcrumbswe .crumb {
+	float: left;
+	font-weight: normal;
+	word-wrap: normal;
+	padding-left: 5px;
+}
+
+.breadcrumbswe .crumb:before {
+	content: '\2039';
+	font-weight: bold;
+	padding: 0 0.5em;
+}
+
+.breadcrumbswe .crumb:first-child:before {
+	content: none;
+}
+
+.breadcrumbswe .crumb a {
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	vertical-align: bottom;
+	overflow: hidden;
+}
+
+.breadcrumbswe.wrapped .crumb a { letter-spacing: -.3px; }
+.breadcrumbswe.wrapped .crumb.wrapped-medium a { letter-spacing: -.4px; }
+.breadcrumbswe.wrapped .crumb.wrapped-tiny a { letter-spacing: -.5px; }
+
+.breadcrumbswe .crumb.wrapped-max a { max-width: 120px; }
+.breadcrumbswe .crumb.wrapped-wide a { max-width: 100px; }
+.breadcrumbswe .crumb.wrapped-medium a { max-width: 80px; }
+.breadcrumbswe .crumb.wrapped-small a { max-width: 60px; }
+.breadcrumbswe .crumb.wrapped-tiny a { max-width: 40px; }
+
+.rtl .breadcrumbswe .crumb {
+	float: right;
+}
+
+#nav-breadcrumbs > li.breadcrumbs {
+	display: none;
+}
+/* END - Responsive breadcrumbswe
+----------------------------------------*/
+
 .slideweuni-title > h1 {
 	margin-right: 0;
 	font-size: 3em;
@@ -19,10 +65,6 @@
 ul.navlinks {
 	padding-left: unset;
 	padding-right: unset;
-}
-
-.breadcrumbs .crumb {
-	padding-left: 5px;
 }
 
 .carousel-indicators {

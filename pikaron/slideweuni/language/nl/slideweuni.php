@@ -35,7 +35,7 @@ if (empty($lang) || !is_array($lang))
 // in a url you again do not need to specify an order e.g., 'Click %sHERE%s' is fine
 
 $lang = array_merge($lang, array(
-		'SLIDE_WEUNI_PHPBB_ERROR'			=> 'Slideshow for Header kan niet worden geïnstalleerd. Het vereist phpBB 3.2.4 of nieuwer.',
-		'SLIDE_WEUNI_PHP_ERROR'				=> 'Slideshow for Header kan niet worden geïnstalleerd. Het vereist php 5.6.0 of nieuwer.',
+		'SLIDE_WEUNI_PHPBB_ERROR'			=> 'Slideshow for Header kan niet worden geïnstalleerd. Het vereist phpBB 3.3.0 of nieuwer.',
+		'SLIDE_WEUNI_PHP_ERROR'				=> 'Slideshow for Header kan niet worden geïnstalleerd. Het vereist php 7.1.0 of nieuwer.',
 		'SLIDE_WEUNI_OLD_VERSION'			=> 'Slideshow for Header kan niet worden geïnstalleerd.<br><br>An outdated version of the installed extension exists.<br><br>Before installing the new version, it is necessary to completely uninstall the SlideWeUni_%1$s version<br><br>You can download the obsolete version from the following link <a href="http://www.siteproall.com/SlideWeUni/SlideWeUni_%2$s.zip">Download SlideWeUni_%3$s</a>.',
 ));

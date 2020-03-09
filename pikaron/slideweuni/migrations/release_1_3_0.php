@@ -1,9 +1,9 @@
 <?php
 /**
  *
- * Slideshow for Header extension for the phpBB Forum Software package.
+ * Slideshow for Header extension for the phpBB >=3.3.0 Forum Software package.
  *
- * @copyright (c) 2019 Picaron
+ * @copyright (c) 2020 Picaron
  * @license GNU General Public License, version 2 (GPL-2.0)
  *
  */

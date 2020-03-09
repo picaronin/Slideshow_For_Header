@@ -1,9 +1,9 @@
 <?php
 /**
  *
- * Slideshow for Header extension for the phpBB Forum Software package.
+ * Slideshow for Header extension for the phpBB >=3.3.0 Forum Software package.
  *
- * @copyright (c) 2019 Picaron
+ * @copyright (c) 2020 Picaron
  * @license GNU General Public License, version 2 (GPL-2.0)
  *
  */
@@ -35,11 +35,11 @@ class ext extends \phpbb\extension\base
 		/**
 		 * Check phpBB requirements
 		 *
-		 * Requires phpBB 3.2.4 or greater
+		 * Requires phpBB 3.3.0 or greater
 		 *
 		 * @return bool
 		 */
-		$is_ver_phpbb = phpbb_version_compare($config['version'], '3.2.4', '>=');
+		$is_ver_phpbb = phpbb_version_compare($config['version'], '3.3.0', '>=');
 
 		// Display a custom warning message if requirement fails.
 		if (!$is_ver_phpbb)
@@ -50,11 +50,11 @@ class ext extends \phpbb\extension\base
 		/**
 		 * Check PHP requirements
 		 *
-		 * Requires PHP 5.6.0 or greater
+		 * Requires PHP 7.1.0 or greater
 		 *
 		 * @return bool
 		 */
-		$is_ver_php = phpbb_version_compare(PHP_VERSION, '5.6.0', '>=');
+		$is_ver_php = phpbb_version_compare(PHP_VERSION, '7.1.0', '>=');
 
 		// Display a custom warning message if requirement fails.
 		if (!$is_ver_php)
