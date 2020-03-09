@@ -43,7 +43,7 @@ $lang = array_merge($lang, array(
 		'L_SLIDE_WEUNI_DELAY'				=> 'Vertraging voor overgang tussen afbeeldingen',
 		'L_SLIDE_WEUNI_DELAY_EXPLAIN'		=> '(Minimum: 1000 ms = 1 Seconde, Maximum: 20000 ms = 20 Seconden)',
 		'L_UNI_DELAY'						=> 'Milliseconden',
-		'L_SLIDE_WEUNI_INTER'				=> 'De gebruiker kan spelen met de overgang van de afbeeldingen',        
+		'L_SLIDE_WEUNI_INTER'				=> 'De gebruiker kan spelen met de overgang van de afbeeldingen',
 		'L_SLIDE_WEUNI_CONTROLS'			=> 'Toon bedieningselementen',
 		'L_SLIDE_WEUNI_ALEATORY'			=> 'Afbeeldingen in willekeurige volgorde.',
 		'L_SLIDE_WEUNI_TITLE'				=> 'Toon titel en beschrijving',
