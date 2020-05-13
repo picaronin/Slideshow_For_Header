@@ -68,7 +68,7 @@ class release_1_3_0 extends \phpbb\db\migration\migration
 			'add_tables'	=> array(
 				$this->table_prefix . 'slideweuni'	=> array(
 					'COLUMNS'	=> array(
-						'id'	=> array('UINT:10', null),
+						'id'	=> array('UINT:10', 0),
 						'image'	=> array('VCHAR', ''),
 						'url'	=> array('VCHAR', ''),
 					),
