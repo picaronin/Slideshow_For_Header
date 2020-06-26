@@ -2,7 +2,7 @@
 # [3.3] Slideshow for Header Extension 3.3.0
 
 ## Description
-- This Extension give a Slider Carousel effect for jQuery in the header of the prosilver >= 3.3.0, we_universal >= 2.6.3, X-Creamy >= 1.2.3, Orange_BBEs >= 3.0.0, flat-style >= 1.1.0, elegance >= 3.3.0, Carbon >= 1.3.3, CleanSilver >= 1.1.0, Maxthon >= 2.1.0, Rock'n Roll >= 3.0.0, Black-Silver >= 1.3.3 (& Slim-Split), prosilver_se >= 3.3.0, cubes >= 1.0.3, proflat >= 1.3.0, pro_ubuntu_lucid >= 3.0.0, ne-blackgreen >= 4.0, rain_forest >= 1.1.3 and PS4 Pro >= 2.1.0 templates replacing the existing banner.
+- This Extension give a Slider Carousel effect for jQuery in the header of the prosilver >= 3.3.0, we_universal >= 2.6.3, X-Creamy >= 1.2.3, Orange_BBEs >= 3.0.0, flat-style >= 1.1.0, elegance >= 3.3.0, Carbon >= 1.3.3, CleanSilver >= 1.1.0, Maxthon >= 2.1.0, Rock'n Roll >= 3.0.0, Black-Silver >= 1.3.3 (& Slim-Split), prosilver_se >= 3.3.0, cubes >= 1.0.3, proflat >= 1.3.0, pro_ubuntu_lucid >= 3.0.0, ne-blackgreen >= 4.0, rain_forest >= 1.1.3, IDLaunch Fresh >= 3.3.0, Simplicity >= 3.3.0 and PS4 Pro >= 2.1.0 templates replacing the existing banner.
 
 - Supports up to 60 images to which an external link URL can optionally be associated.
 - In order not to alter the initial design of the style, the recommended size of the images must be 2570px x 465px. 
