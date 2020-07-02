@@ -29,10 +29,6 @@ a.right:after {
 	bottom: 0;
 }
 
-#search-box {
-	display: none;
-}
-
 #main-sliderwe {
 	position: inherit;
 	width: 94.8%;
@@ -161,4 +157,16 @@ div.header-profile	> div.dropdown {
 		display: block;
 		margin-top: -6px;
 	}
+}
+
+
+/*	Compatibility with Navbar Search
+---------------------------------------------- */
+
+#nav-breadcrumbs > li.responsive-search {
+	display: none !important;
+}
+
+li:not(.breadcrumbs)::before {
+	content: none !important;
 }

@@ -1,6 +1,10 @@
 /*	SlideShow for X-Creamy Styling
 ---------------------------------------------- */
 
+#page-header > #search-box {
+    display: none;
+}
+
 .carousel-indicators {
 	bottom: 15px;
 }

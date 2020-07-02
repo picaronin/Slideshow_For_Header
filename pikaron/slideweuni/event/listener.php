@@ -169,6 +169,7 @@ class listener implements EventSubscriberInterface
 				'S_SLIDE_WEUNI_DELAY'		=> $this->config['slideweuni_delay'],
 				'S_SLIDE_WEUNI_TITLE'		=> $this->config['slideweuni_title'] == 1 ? true : false,
 				'S_SLIDE_WEUNI_SEARCH'		=> $this->config['slideweuni_search'] == 1 ? true : false,
+				'S_IN_SEARCH'				=> $this->config['slideweuni_search'] == 1 ? true : false,
 				'S_SLIDE_WEUNI_EFFECT'		=> $this->config['slideweuni_effect'] == 1 ? null : ' carousel-fade',
 				'S_SLIDE_WEUNI_COLOR_TIT_F' => $this->config['slideweuni_color_tit_f'],
 				'S_SLIDE_WEUNI_COLOR_TIT_B' => $this->config['slideweuni_color_tit_b'],

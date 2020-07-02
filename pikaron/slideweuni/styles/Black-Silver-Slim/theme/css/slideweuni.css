@@ -1,6 +1,10 @@
 /*	SlideShow for Black-Silver-Slim Styling
 ---------------------------------------------- */
 
+#search-box{
+	box-shadow: none;
+}
+
 .headerbar {
 	display: block;
 }

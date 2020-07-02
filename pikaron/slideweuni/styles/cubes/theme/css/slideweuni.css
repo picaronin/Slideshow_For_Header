@@ -145,3 +145,10 @@ ul.navlinks {
 		width: auto;
 	}
 }
+
+/*	Compatibility with Navbar Search
+---------------------------------------------- */
+
+#nav-breadcrumbs > li.responsive-search {
+	display: none !important;
+}

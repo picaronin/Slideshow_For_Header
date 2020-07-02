@@ -3,6 +3,9 @@
 		{% INCLUDECSS '@pikaron_slideweuni/css/carousel.css' %}
 		{% INCLUDECSS '@pikaron_slideweuni/css/common.css' %}
 		{% INCLUDECSS '@pikaron_slideweuni/css/slideweuni.css' %}
+            {% if S_SLIDE_WEUNI_SEARCH %}
+                {% INCLUDECSS '@pikaron_slideweuni/css/navbarsearch.css' %}
+            {% endif %}
 		{% set INCLUDED_SLIDEWEUNI_CSS = true %}
 	{% endif %}
 {% endif %}

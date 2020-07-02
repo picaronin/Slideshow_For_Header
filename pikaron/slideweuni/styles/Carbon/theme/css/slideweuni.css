@@ -6,7 +6,6 @@
 }
 
 #carbon_wrap > #site-description,
-#search-box,
 .carbon_wrap > a,
 #page-header,
 #carbon-bottom {
@@ -114,4 +113,11 @@
 	.carousel-control .glyphicon-chevron-right {
 		font-size: 13px;
 	}
+}
+
+/*	Compatibility with Navbar Search
+---------------------------------------------- */
+
+#nav-breadcrumbs > li.responsive-search {
+	display: none !important;
 }

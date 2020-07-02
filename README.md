@@ -1,5 +1,5 @@
 [![phpBB](https://www.phpbb-es.com/foro/styles/flat-style/theme/images/logo_new_small.png)](https://www.phpbb-es.com/foro/viewtopic.php?f=147&t=42139)
-# [3.3] Slideshow for Header Extension 3.3.0
+# [3.3] Slideshow for Header Extension 3.3.1
 
 ## Description
 - This Extension give a Slider Carousel effect for jQuery in the header of the prosilver >= 3.3.0, we_universal >= 2.6.3, X-Creamy >= 1.2.3, Orange_BBEs >= 3.0.0, flat-style >= 1.1.0, elegance >= 3.3.0, Carbon >= 1.3.3, CleanSilver >= 1.1.0, Maxthon >= 2.1.0, Rock'n Roll >= 3.0.0, Black-Silver >= 1.3.3 (& Slim-Split), prosilver_se >= 3.3.0, cubes >= 1.0.3, proflat >= 1.3.0, pro_ubuntu_lucid >= 3.0.0, ne-blackgreen >= 4.0, rain_forest >= 1.1.3, IDLaunch Fresh >= 3.3.0, Simplicity >= 3.3.0 and PS4 Pro >= 2.1.0 templates replacing the existing banner.

@@ -1,0 +1,6 @@
+/*	SlideShow Navbar Search Styling
+---------------------------------------------- */
+
+#nav-breadcrumbs > #search-box {
+    display: none !important;
+}
