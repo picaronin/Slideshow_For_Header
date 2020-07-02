@@ -167,6 +167,6 @@ div.header-profile	> div.dropdown {
 	display: none !important;
 }
 
-li:not(.breadcrumbs)::before {
+#nav-breadcrumbs > li:not(.breadcrumbs)::before {
 	content: none !important;
 }
